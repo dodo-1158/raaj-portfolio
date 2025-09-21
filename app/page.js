@@ -1,5 +1,4 @@
 'use client';
-
 import { useState, useEffect } from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
@@ -9,6 +8,7 @@ import About from '@/components/About/About';
 import Services from '@/components/Services/Services';
 import Awards from '@/components/Awards/Awards';
 import Projects from '@/components/Projects/Projects';
+import Work from '@/components/Work/Work';
 
 
 export default function Home() {
@@ -58,17 +58,31 @@ export default function Home() {
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
+ const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 50) { // Adjust threshold as needed
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
+
     <main className={styles.main}>
-      <nav className={styles.navbar}>
- 
+      <nav className={`${styles.navbar} ${isScrolled ? styles.navScrolled : ''}`}>
         <div >
           <div>
             <Link href="/">
             <Image src="/Raaj-Logo1.png" alt="Logo"  width={150}   // set width in px
   height={0}   
-  style={{ height: "auto" }}  />
+  style={{ height: "auto" }} 
+  className={styles.navLogo} />
   </Link>
           </div>
           
@@ -139,6 +153,7 @@ export default function Home() {
 
 <section id="work">
   {/* My Work Content */}
+  <Work />
 </section>
 
 <section id="awards">

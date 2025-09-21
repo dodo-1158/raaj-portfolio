@@ -11,7 +11,6 @@
   overflow-x: hidden;
 }
 
-/* Navigation Styles */
 .navbar {
   position: fixed;
   top: 0;
@@ -24,6 +23,12 @@
   align-items: center;
   padding: 20px 200px;
   background: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.navScrolled {
+  background-color: #333333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .logo {
@@ -263,18 +268,26 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+
   .navbar {
     padding: 15px 20px;
-    flex-direction: column;
+   margin-bottom: 0;
     gap: 15px;
+    background: #ffffff;
   }
-  
+  .navLogo {
+    width: 120px;
+    height: 120px;
+  }
   .navLinks {
-    gap: 20px;
+    color: #000;
+    gap: 10px;
   }
   
   .navLink {
-    font-size: 12px;
+    font-size: 8px;
+      color: #000;
   }
   
   .mainText {

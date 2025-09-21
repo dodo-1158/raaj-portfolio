@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
 /* Navigation Styles */
 .navbar {
   position: fixed;
@@ -81,12 +83,13 @@
   margin: 0 auto;
   padding: 40px 20px 30px 20px;
   text-align: center;
-  font-family: 'Arial', sans-serif;
+ 
 }
 
 .heading {
+  font-family: 'Merriweather', serif;
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 30px;
 }
 
@@ -139,6 +142,7 @@
 }
 
 .formHeading {
+  font-family: 'Merriweather', serif;
   font-size: 2.5rem;
   margin-top: 100px;
 }
@@ -229,4 +233,17 @@
   display: flex;
   flex-direction: column; /* stack input + error vertically */
   flex: 1; /* make inputs equal width in row */
+}
+
+.button:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  border: 2px solid #ccc;
+}
+
+.button:disabled:hover {
+  background: #ccc;
+  color: #666;
+  border: 2px solid #ccc;
 }
