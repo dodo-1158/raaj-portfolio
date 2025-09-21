@@ -10,12 +10,12 @@ import Awards from '@/components/Awards/Awards';
 import Projects from '@/components/Projects/Projects';
 import Work from '@/components/Work/Work';
 
-
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [fadeIn, setFadeIn] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [animationKey, setAnimationKey] = useState(0); // Add this for animation reset
 
   const slides = [
     {
@@ -23,21 +23,21 @@ export default function Home() {
       upperText: "My Story",
       mainText: "BEGINS HERE",
       subText: "I CAN GIVE YOU EVERYTHING YOU NEED!",
-      backgroundImage: "/homepage-1.jpg" // Desktop setup image
+      backgroundImage: "/homepage-1.jpg"
     },
     {
       id: 2,
       upperText: "Your Vision, My Art",
-      mainText: "A New Path Emerges",
+      mainText: "A NEW PATH EMERGES",
       subText: "",
-      backgroundImage: "/homepage-2.jpg" // Camera equipment image
+      backgroundImage: "/homepage-2.jpg"
     },
     {
       id: 3,
       upperText: "Your Story, My Magic",
-      mainText: "A New Chapter Unfolds",
+      mainText: "A NEW CHAPTER UNFOLDS",
       subText: "",
-      backgroundImage: "/homepage-3.jpg" // Camera equipment image
+      backgroundImage: "/homepage-3.jpg"
     }
   ];
 
@@ -46,11 +46,15 @@ export default function Home() {
     
     // Auto-change slides every 5 seconds
     const interval = setInterval(() => {
-      setCurrentSlide(prev => (prev + 1) % slides.length);
+      setCurrentSlide(prev => {
+        const newSlide = (prev + 1) % slides.length;
+        setAnimationKey(prev => prev + 1); // Reset animations
+        return newSlide;
+      });
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -78,10 +82,12 @@ export default function Home() {
 
   const nextSlide = () => {
     setCurrentSlide(prev => (prev + 1) % slides.length);
+    setAnimationKey(prev => prev + 1); // Reset animations
   };
 
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
+    setAnimationKey(prev => prev + 1); // Reset animations
   };
 
   const toggleMobileMenu = () => {
@@ -118,6 +124,15 @@ export default function Home() {
       }
     };
   }, []);
+
+  // Function to create wave animation spans
+  const createWaveText = (text) => {
+    return text.split("").map((char, i) => (
+      <span key={`${animationKey}-${i}`} style={{ animationDelay: `${0.6 + (i * 0.08)}s` }}>
+        {char === " " ? "\u00A0" : char}
+      </span>
+    ));
+  };
 
   return (
     <main className={styles.main}>
@@ -178,15 +193,11 @@ export default function Home() {
             }}
           >
             <div className={styles.slideContent}>
-              <div key={currentSlide} className={styles.textContent}>
+              <div key={`${slide.id}-${animationKey}`} className={styles.textContent}>
                 <div className={styles.upperText}>{slide.upperText}</div>
 
                 <div className={`${styles.mainText} ${styles.wave}`}>
-                  {slide.mainText.split("").map((char, i) => (
-                    <span key={i} style={{ animationDelay: `${i * 0.1}s` }}>
-                      {char === " " ? "\u00A0" : char}
-                    </span>
-                  ))}
+                  {createWaveText(slide.mainText)}
                 </div>
 
                 {slide.subText && <div className={styles.subText}>{slide.subText}</div>}
