@@ -84,9 +84,13 @@ const About = () => {
               </p>
             </div>
             
-            <a href="/contact" className={styles.hireBtn}>
+            <div className={styles.hireBtnDiv}>
+
+<a href="/contact" className={styles.hireBtn}>
               Hire Me Now
             </a>
+            </div>
+            
           </div>
 
           {/* Image Section */}

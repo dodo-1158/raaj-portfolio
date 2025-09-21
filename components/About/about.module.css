@@ -22,14 +22,23 @@
   align-items: center;
 }
 
-/* Content Section */
 .contentSection {
   opacity: 0;
-  transform: translateX(32px);
+  transform: translateX(100px);
   transition: all 1s ease-out;
 }
-
 .contentSection.animateRight {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animate Left (Image) */
+.imageSection {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-out;
+}
+.imageSection.animateLeft {
   opacity: 1;
   transform: translateX(0);
 }
@@ -78,82 +87,84 @@
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
 }
-
-/* Image Section */
-.imageSection {
-  opacity: 0;
-  transform: translateX(-32px);
-  transition: all 1s ease-out;
-  position: relative;
-}
-
-.imageSection.animateLeft {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 .imageContainer {
   position: relative;
   display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
+/* Image */
 .aboutImage {
   width: 100%;
   height: 400px;
-  border-radius: 8px;
-  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.3));
-  transition: all 0.3s ease;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-.imageContainer:hover .aboutImage {
-  transform: scale(1.02);
-}
-
+/* Glow Border Wrapper */
 .glowBorder {
   position: absolute;
-  inset: 0;
-  border-radius: 8px;
-  padding: 2px;
-  background: linear-gradient(45deg, #00ff88, #00d4ff, #ff006b, #ff8800);
-  background-size: 400% 400%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  animation: gradientFlow 3s ease infinite;
+  border: 0.5px solid transparent;
+  background:#ffffff;
+  background-size: 300% 300%;
+  animation: gradientFlow 6s ease infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+  inset: 20px;
+}
+
+/* Hover → animate both image and glow */
+.imageContainer:hover .aboutImage {
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 .imageContainer:hover .glowBorder {
   opacity: 1;
 }
 
-.glowBorder::before {
-  content: '';
-  position: absolute;
-  inset: 2px;
-  background: #000;
-  border-radius: 6px;
+/* Animated Gradient Flow */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Keyframe Animations */
-@keyframes gradientFlow {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+
+   
+  .aboutSection {
+  margin-left: auto;  
+  margin-right: auto;
+}
+
   .aboutGrid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 32px;
   }
 
   .title {
     font-size: 2.5rem;
   }
+
+  .hireBtnDiv{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 
 @media (max-width: 768px) {
@@ -177,6 +188,9 @@
     padding: 12px 28px;
     font-size: 14px;
   }
+   .aboutImage {
+    height: 400px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -190,6 +204,13 @@
   }
 
   .aboutSection {
-    padding: 40px 15px;
+    padding: 40px 35px;
+    
   }
+.textContent p{
+  line-height: -0.1em;
 }
+   .aboutImage {
+    height: 400px;
+  }
+}}
