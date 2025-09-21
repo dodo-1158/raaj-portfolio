@@ -125,15 +125,44 @@ export default function Home() {
     };
   }, []);
 
-  // Function to create wave animation spans
   const createWaveText = (text) => {
-    return text.split("").map((char, i) => (
-      <span key={`${animationKey}-${i}`} style={{ animationDelay: `${0.6 + (i * 0.08)}s` }}>
-        {char === " " ? "\u00A0" : char}
-      </span>
-    ));
-  };
+  return text.split(" ").map((word, wordIndex) => (
+    <span 
+      key={`${animationKey}-word-${wordIndex}`}
+      style={{ 
+        display: 'inline-block',
+        marginRight: '0.3em'
+      }}
+    >
+      {word.split("").map((char, charIndex) => (
+        <span 
+          key={`${animationKey}-${wordIndex}-${charIndex}`}
+          style={{ 
+            animationDelay: `${0.6 + (wordIndex * 0.3) + (charIndex * 0.05)}s`,
+            display: 'inline-block'
+          }}
+        >
+          {char}
+        </span>
+      ))}
+    </span>
+  ));
+};
 
+// const createWaveText = (text) => {
+//   return text.split(" ").map((word, wordIndex) => (
+//     <span 
+//       key={`${animationKey}-word-${wordIndex}`} 
+//       style={{ 
+//         animationDelay: `${0.6 + (wordIndex * 0.15)}s`,
+//         display: 'inline-block',
+//         marginRight: '0.3em' // Add space between words
+//       }}
+//     >
+//       {word}
+//     </span>
+//   ));
+// };
   return (
     <main className={styles.main}>
       <nav className={`${styles.navbar} ${isScrolled ? styles.navScrolled : ''}`}>

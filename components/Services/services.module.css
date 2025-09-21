@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 
 .servicesSection {
   padding: 100px 0;
@@ -113,7 +113,6 @@ font-size: 2.5rem;
   }
 }
 
-/* Tablet styles */
 @media (max-width: 1024px) {
   .servicesSection {
     padding: 80px 0;
@@ -142,7 +141,6 @@ font-size: 2.5rem;
   }
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
   .servicesSection {
     padding: 60px 0;
@@ -186,7 +184,6 @@ font-size: 2.5rem;
   }
 }
 
-/* Small mobile styles */
 @media (max-width: 480px) {
   .servicesSection {
     padding: 50px 0;
@@ -215,5 +212,326 @@ font-size: 2.5rem;
   
   .serviceDescription {
     font-size: 0.8rem;
+  }
+} */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+.servicesSection {
+  padding: 100px 0;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden; /* Prevent horizontal scroll issues */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.title {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: #999;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 300;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.serviceCard {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px) scale(0.8);
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.serviceCard.bounceIn {
+  animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.iconContainer {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  transition: all 0.3s ease;
+}
+
+.iconContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+}
+
+.serviceIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+.serviceTitle {
+  font-family: 'Merriweather', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 12px 0;
+}
+
+.serviceDescription {
+  font-size: 0.7rem;
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 400;
+  max-width: 100%;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .servicesSection {
+    padding: 80px 0;
+    min-height: auto;
+  }
+  
+  .container {
+    padding: 0 30px;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .servicesGrid {
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .serviceCard {
+    padding: 15px;
+  }
+  
+  .iconContainer {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+  
+  .serviceIcon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .serviceTitle {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .serviceDescription {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .servicesSection {
+    padding: 40px 0;
+    min-height: auto;
+    align-items: flex-start;
+  }
+  
+  .container {
+    padding: 0 20px;
+  }
+  
+  .header {
+    margin-bottom: 35px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+  }
+  
+  .servicesGrid {
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+  
+  .serviceCard {
+    padding: 10px;
+    max-width: 100%;
+  }
+  
+  .iconContainer {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+  }
+  
+  .serviceIcon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .serviceTitle {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .serviceDescription {
+    font-size: 0.65rem;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .servicesSection {
+    padding: 30px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .header {
+    margin-bottom: 30px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 0.7rem;
+  }
+  
+  .servicesGrid {
+    gap: 15px;
+  }
+  
+  .serviceCard {
+    padding: 8px;
+  }
+  
+  .iconContainer {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+  }
+  
+  .serviceIcon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .serviceTitle {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+  
+  .serviceDescription {
+    font-size: 0.6rem;
+    line-height: 1.3;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+  .servicesSection {
+    padding: 25px 0;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+  }
+  
+  .servicesGrid {
+    gap: 12px;
+  }
+  
+  .serviceCard {
+    padding: 6px;
+  }
+  
+  .iconContainer {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+  
+  .serviceIcon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .serviceTitle {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+  }
+  
+  .serviceDescription {
+    font-size: 0.55rem;
+    line-height: 1.2;
   }
 }
