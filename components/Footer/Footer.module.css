@@ -36,7 +36,6 @@
 
 .line {
   flex: 1;
-  
   height: 1px;
   background: #ccc;   /* grey line */
   max-width: 20%;   /* keeps it short */
@@ -73,4 +72,28 @@
 
 .scrollToTop:hover svg {
   transform: translateY(-1px);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .footerlogoImg {
+    height: 55px; /* smaller logo on tablets/mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .footerlogoImg {
+    height: 45px; /* even smaller logo on mobile */
+  }
+
+  .footerContent {
+    font-size: 11px;
+  }
 }
