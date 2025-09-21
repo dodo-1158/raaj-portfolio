@@ -239,7 +239,6 @@
     height: 20px; 
   }
 } */
-
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
@@ -283,43 +282,29 @@
   font-weight: 300;
 }
 
-/* .carouselContainer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 2;
-  gap: 20px;
-} */
 /* Fix navButton positioning so arrows are always visible */
 .carouselContainer {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center; /* Changed from space-between so arrows don't get pushed away */
+  justify-content: center;
   z-index: 2;
-  gap: 0; /* Removed unnecessary spacing */
+  gap: 0;
 }
 
 .navButton {
-  position: absolute; /* Overlay the carousel */
+  position: absolute;
   top: 50%;
-
+  transform: translateY(-50%);
 }
 
 .navButton:first-of-type {
-  left: -25px; /* Adjust for aesthetics */
+  left: -25px;
 }
 
 .navButton:last-of-type {
   right: -25px;
 }
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
- 
-}
-
 
 .carousel {
   flex: 1;
@@ -350,7 +335,7 @@
   flex-shrink: 0;
   box-shadow: 0 10px 28px rgba(0,0,0,0.55);
   border-radius: 5px;
-  filter: brightness(0.65) grayscale(20%);
+  /* filter: brightness(0.65) grayscale(20%); */
   transition: box-shadow 0.3s, filter 0.3s, transform 0.3s;
 }
 
@@ -359,6 +344,7 @@
   filter: none;
   box-shadow: 0 26px 60px rgba(0,0,0,0.47), 0 2px 8px rgba(0,0,0,0.18);
   z-index: 2;
+
 }
 
 .inactiveSlide {
@@ -415,7 +401,7 @@
 .navButton:hover {
   background: #ff5c29;
   color: #fff;
-  transform: scale(1.12);
+  transform: scale(1.12) translateY(-50%);
   outline: none;
 }
 
@@ -432,6 +418,7 @@
   padding-bottom: 20px;
 }
 
+/* Mobile styles - Major improvements */
 @media (max-width: 768px) {
   .title {
     font-family: 'Merriweather', serif;
@@ -447,39 +434,45 @@
   
   .carouselContainer {
     gap: 15px;
-
+    padding: 0 60px; /* Add padding to keep arrows inside screen */
   }
   
+  /* Increased carousel height to accommodate larger active slides */
   .carousel { 
     max-width: 100%;
-    height: 320px;
+    height: 450px; /* Further increased height */
     touch-action: pan-x;
-    margin-top:  0;
+    margin-top: 5px; /* Further reduced gap between subtitle and carousel */
   }
   
+  /* Increased slide container height and adjusted alignment */
   .slideContainer {
-    gap: 10px;
+    gap: 15px; /* Increased gap for better spacing */
     justify-content: center;
-    height: 500px;
+    align-items: flex-end; /* Keep alignment at bottom */
+    height: 450px; /* Increased height */
+    padding-bottom: 60px; /* More padding to prevent shadow cutoff */
   }
 
   .slide {
-    width: 200px;
-    height: 280px;
-    transition: transform 0.3s, opacity 0.3s, filter 0.3s;
+    width: 240px; /* Further increased inactive slide size */
+    height: 320px; /* Further increased inactive height */
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
   }
 
   .inactiveSlide {
-    opacity: 0.6;
-    filter: brightness(0.5) grayscale(30%);
-    transform: scale(0.85);
+    opacity: 0.35; /* Further decreased opacity for more contrast */
+    filter: brightness(0.6) grayscale(25%);
+    transform: scale(0.8); /* Smaller scale for more contrast */
   }
 
+  /* Much more prominent active slide */
   .activeSlide {
-    transform: scale(1);
+    transform: scale(1.4) !important; /* Even larger active slide */
     opacity: 1;
     filter: none;
-    z-index: 2;
+    z-index: 10;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 5px 15px rgba(0,0,0,0.3); /* Reduced shadow */
   }
 
   .projectCard {
@@ -494,15 +487,31 @@
     background: rgb(247,247,247, 0.98);
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   }
-   .navButton:first-of-type {
-    left: 40px !important;
+  
+  .navButton:hover {
+    transform: scale(1.12) translateY(-50%);
   }
+  
+  .navButton:first-of-type {
+    left: -25px; /* Reset to original position within padded container */
+  }
+  
   .navButton:last-of-type {
-    right: 40px !important;
+    right: -25px; /* Reset to original position within padded container */
+  }
+  
+  /* Much larger white background to accommodate drop shadows */
+  .carouselWhiteBg {
+    height: 180px !important; /* Even larger white section */
+  }
+
+  .header {
+    margin-bottom: 15px; /* Further reduced gap between header and carousel */
   }
 }
 
-@media (max-width: 1200px) {
+
+@media (max-width: 1200px) and (min-width: 769px) {
   .navButton:first-of-type {
     left: 100px;
   }
@@ -510,8 +519,11 @@
     right: 100px;
   }
   
-}
 
+  .carouselWhiteBg {
+    height: 100px; /* Increased from default 60px */
+  }
+}
 
 @media (min-width: 768px) and (max-width: 920px) {
   .navButton:first-of-type {
@@ -520,44 +532,67 @@
   .navButton:last-of-type {
     right: 180px;
   }
+  
+  /* Even larger white background for smaller tablets */
+  .carouselWhiteBg {
+    height: 120px; /* Increased for better floating effect */
+  }
 }
 
+/* Small mobile phones */
 @media (max-width: 600px) {
   .carouselContainer {
     gap: 12px;
+    padding: 0 50px; /* Add padding for small screens too */
   }
   
+  /* Further increased height for small screens */
   .carousel { 
     max-width: 100%;
-    height: 260px;
-    margin-top: 30px;
+    height: 420px; /* Increased */
+    margin-top: 0px; /* Minimal gap for small screens */
     touch-action: pan-x;
-  
   }
   
   .slideContainer {
-    height: 260px;
-    gap: 8px;
+    height: 420px; /* Increased */
+    gap: 12px;
+    padding-bottom: 70px; /* More padding for shadow */
   }
 
   .slide {
-    width: 160px;
-    height: 220px;
+    width: 210px; /* Further increased inactive slide size */
+    height: 280px; /* Further increased inactive height */
+  }
+  
+  /* Even more prominent active slide on small screens */
+  .activeSlide {
+    transform: scale(1.5) !important; /* Even larger on small screens */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 8px 18px rgba(0,0,0,0.4); /* Reduced shadow */
   }
 
-  /* .navButton { 
+  .navButton { 
     width: 42px; 
     height: 42px; 
     font-size: 1.1rem;
     background: rgb(247,247,247, 0.98);
     box-shadow: 0 4px 15px rgba(0,0,0,0.35);
-  } */
+  }
   
+  .navButton:first-of-type {
+    left: -21px; /* Reset to original position within padded container */
+  }
+  
+  .navButton:last-of-type {
+    right: -21px; /* Reset to original position within padded container */
+  }
+  
+  /* Even larger white section for small screens */
   .carouselWhiteBg { 
-    height: 20px; 
+    height: 200px !important; /* Very large to accommodate shadows */
   }
 
   .header {
-    margin-bottom: 50px;
+    margin-bottom: 10px; /* Minimal gap for small screens */
   }
 }
