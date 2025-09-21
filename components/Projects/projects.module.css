@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
 .projectsSection {
-position: relative; /* add for absolute white bar anchoring */
+  position: relative;
   padding: 80px 0 0 0;
   background: #222;
   overflow: hidden;
   margin-bottom: 50px;
 }
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -15,10 +16,12 @@ position: relative; /* add for absolute white bar anchoring */
   width: 100%;
   position: relative;
 }
+
 .header {
   text-align: center;
   margin-bottom: 70px;
 }
+
 .title {
   font-family: 'Merriweather', serif;
   font-size: 2.5rem;
@@ -27,6 +30,7 @@ position: relative; /* add for absolute white bar anchoring */
   margin: 0 0 30px 0;
   line-height: 1;
 }
+
 .subtitle {
   font-style: italic; 
   font-size: 0.875rem;
@@ -36,6 +40,7 @@ position: relative; /* add for absolute white bar anchoring */
   margin: 0;
   font-weight: 300;
 }
+
 .carouselContainer {
   position: relative;
   display: flex;
@@ -43,6 +48,7 @@ position: relative; /* add for absolute white bar anchoring */
   justify-content: center;
   z-index: 2;
 }
+
 .carousel {
   flex: 1 0 0;
   display: flex;
@@ -57,14 +63,14 @@ position: relative; /* add for absolute white bar anchoring */
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: 28px; /* reduced gap as per request */
+  gap: 28px;
   height: 355px;
-  transition: transform 0.5s ease; /* smooth sliding */
+  transition: transform 0.5s ease;
   will-change: transform;
 }
 
 .slide {
-  position: relative; /* default */
+  position: relative;
   width: 235px;
   height: 330px;
   cursor: grab;
@@ -72,7 +78,7 @@ position: relative; /* add for absolute white bar anchoring */
   box-shadow: 0 10px 28px rgba(0,0,0,0.55);
   border-radius: 5px;
   filter: brightness(0.65) grayscale(20%);
-  transition: box-shadow 0.3s, filter 0.3s;
+  transition: box-shadow 0.3s, filter 0.3s, transform 0.3s;
 }
 
 .activeSlide {
@@ -82,18 +88,17 @@ position: relative; /* add for absolute white bar anchoring */
   z-index: 2;
 }
 
-
-
-
 .inactiveSlide {
   filter: brightness(0.65) grayscale(20%);
   z-index: 1;
 }
+
 .projectCard {
   position: relative;
   width: 100%;
   height: 100%;
 }
+
 .projectImage {
   border-radius: 5px;
   width: 100%;
@@ -102,14 +107,18 @@ position: relative; /* add for absolute white bar anchoring */
   display: block;
   transition: filter 0.25s, transform 0.3s;
 }
+
 .overlay {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
   border-radius: 5px;
   background: rgba(21,21,21,0.57);
   z-index: 2;
 }
+
 .navButton {
   background: rgb(247,247,247, 0.89);
   border: none;
@@ -127,6 +136,7 @@ position: relative; /* add for absolute white bar anchoring */
   font-size: 1.34rem;
   transition: background 0.25s, color 0.25s, transform 0.16s;
 }
+
 .navButton:hover {
   background: #ff5c29;
   color: #fff;
@@ -139,45 +149,415 @@ position: relative; /* add for absolute white bar anchoring */
   bottom: 0;
   left: 0; 
   right: 0;
-width: 100vw;   /* spans the full section width */
+  width: 100vw;  
   height: 60px;
   background: white;
   z-index: 1;
   border-radius: 0;
   padding-bottom: 20px;
-
 }
 
-@media (max-width: 1300px) {
-  .carousel { max-width: 950px; }
-  .slideContainer { gap: 32px; }
-  .slide { width: 180px; height: 250px; }
-}
-
-@media (max-width: 900px) {
-  .carousel { max-width: 720px; height: 180px; }
-  .slideContainer { height: 180px; gap: 18px; }
-  .slide { width: 92px; height: 130px; }
-  .carouselWhiteBg { height: 28px; }
-}
 @media (max-width: 768px) {
-  .slide {
-    min-width: calc((100vw - 4 * 16px) / 3); /* 3 slides with 16px approx gap */
-    height: auto;
-    aspect-ratio: 3 / 4;
+  .title {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.03em;
   }
+
+  .subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+  }
+  
+  .carousel { 
+    max-width: 100%;
+    height: 280px;
+  }
+  
   .slideContainer {
     gap: 16px;
+    justify-content: center;
+    height: 280px;
   }
-  .carousel {
-    height: auto;
+
+  .slide {
+    width: 160px;
+    height: 240px;
+    transition: transform 0.3s, opacity 0.3s, filter 0.3s;
+  }
+
+  .inactiveSlide {
+    opacity: 0.6;
+    filter: brightness(0.5) grayscale(30%);
+    transform: scale(0.8);
+  }
+
+  .activeSlide {
+    transform: scale(1);
+    opacity: 1;
+    filter: none;
+    z-index: 2;
+  }
+
+  .projectCard {
+    width: 100%;
+    height: 100%;
+  }
+
+  .navButton { 
+    width: 45px; 
+    height: 45px; 
+    font-size: 1.1rem; 
   }
 }
-/* 
+
 @media (max-width: 600px) {
-  .carousel { max-width: 98vw; height: 140px;}
-  .slideContainer { height: 140px; gap: 8px;}
-  .slide { width: 54px; height: 80px;}
-  .navButton { width: 31px; height: 31px; font-size: 0.92rem; }
-  .carouselWhiteBg { height: 18px; }
+  .carousel { 
+    max-width: 98vw; 
+    height: 220px;
+    margin-top: 30px;
+  }
+  
+  .slideContainer {
+    height: 220px;
+    gap: 12px;
+  }
+
+  .slide {
+    width: 130px;
+    height: 180px;
+  }
+
+  .navButton { 
+    width: 36px; 
+    height: 36px; 
+    font-size: 0.95rem; 
+  }
+  
+  .carouselWhiteBg { 
+    height: 20px; 
+  }
 } */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+.projectsSection {
+  position: relative;
+  padding: 80px 0 0 0;
+  background: #222;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.title {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 30px 0;
+  line-height: 1;
+}
+
+.subtitle {
+  font-style: italic; 
+  font-size: 0.875rem;
+  color: #999;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* .carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  gap: 20px;
+} */
+/* Fix navButton positioning so arrows are always visible */
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Changed from space-between so arrows don't get pushed away */
+  z-index: 2;
+  gap: 0; /* Removed unnecessary spacing */
+}
+
+.navButton {
+  position: absolute; /* Overlay the carousel */
+  top: 50%;
+
+}
+
+.navButton:first-of-type {
+  left: -25px; /* Adjust for aesthetics */
+}
+
+.navButton:last-of-type {
+  right: -25px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+ 
+}
+
+
+.carousel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  position: relative;
+  height: 355px;
+  touch-action: pan-x;
+}
+
+.slideContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  height: 355px;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.slide {
+  position: relative;
+  width: 235px;
+  height: 330px;
+  cursor: grab;
+  flex-shrink: 0;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.55);
+  border-radius: 5px;
+  filter: brightness(0.65) grayscale(20%);
+  transition: box-shadow 0.3s, filter 0.3s, transform 0.3s;
+}
+
+.activeSlide {
+  transform: scale(1.08);
+  filter: none;
+  box-shadow: 0 26px 60px rgba(0,0,0,0.47), 0 2px 8px rgba(0,0,0,0.18);
+  z-index: 2;
+}
+
+.inactiveSlide {
+  filter: brightness(0.65) grayscale(20%);
+  z-index: 1;
+}
+
+.projectCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.projectImage {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.25s, transform 0.3s;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  border-radius: 5px;
+  background: rgba(21,21,21,0.57);
+  z-index: 2;
+}
+
+.navButton {
+  background: rgb(247,247,247, 0.95);
+  border: none;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  margin: 0;
+  z-index: 30;
+  color: #222;
+  font-size: 1.34rem;
+  transition: background 0.25s, color 0.25s, transform 0.16s;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.navButton:hover {
+  background: #ff5c29;
+  color: #fff;
+  transform: scale(1.12);
+  outline: none;
+}
+
+.carouselWhiteBg {
+  position: absolute;
+  bottom: 0;
+  left: 0; 
+  right: 0;
+  width: 100vw;  
+  height: 60px;
+  background: white;
+  z-index: 1;
+  border-radius: 0;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.03em;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+  }
+  
+  .carouselContainer {
+    gap: 15px;
+
+  }
+  
+  .carousel { 
+    max-width: 100%;
+    height: 320px;
+    touch-action: pan-x;
+    margin-top:  0;
+  }
+  
+  .slideContainer {
+    gap: 10px;
+    justify-content: center;
+    height: 500px;
+  }
+
+  .slide {
+    width: 200px;
+    height: 280px;
+    transition: transform 0.3s, opacity 0.3s, filter 0.3s;
+  }
+
+  .inactiveSlide {
+    opacity: 0.6;
+    filter: brightness(0.5) grayscale(30%);
+    transform: scale(0.85);
+  }
+
+  .activeSlide {
+    transform: scale(1);
+    opacity: 1;
+    filter: none;
+    z-index: 2;
+  }
+
+  .projectCard {
+    width: 100%;
+    height: 100%;
+  }
+
+  .navButton { 
+    width: 48px; 
+    height: 48px; 
+    font-size: 1.2rem;
+    background: rgb(247,247,247, 0.98);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+   .navButton:first-of-type {
+    left: 40px !important;
+  }
+  .navButton:last-of-type {
+    right: 40px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navButton:first-of-type {
+    left: 100px;
+  }
+  .navButton:last-of-type {
+    right: 100px;
+  }
+  
+}
+
+
+@media (min-width: 768px) and (max-width: 920px) {
+  .navButton:first-of-type {
+    left: 180px;
+  }
+  .navButton:last-of-type {
+    right: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carouselContainer {
+    gap: 12px;
+  }
+  
+  .carousel { 
+    max-width: 100%;
+    height: 260px;
+    margin-top: 30px;
+    touch-action: pan-x;
+  
+  }
+  
+  .slideContainer {
+    height: 260px;
+    gap: 8px;
+  }
+
+  .slide {
+    width: 160px;
+    height: 220px;
+  }
+
+  /* .navButton { 
+    width: 42px; 
+    height: 42px; 
+    font-size: 1.1rem;
+    background: rgb(247,247,247, 0.98);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+  } */
+  
+  .carouselWhiteBg { 
+    height: 20px; 
+  }
+
+  .header {
+    margin-bottom: 50px;
+  }
+}

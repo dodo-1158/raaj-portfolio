@@ -274,7 +274,7 @@ font-size: 2.5rem;
   }
   
   .videoGrid {
-    grid-template-columns: 1fr;
+ grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
   }
   
@@ -296,6 +296,11 @@ font-size: 2.5rem;
   .title {
     font-size: 28px;
   }
+
+   .container {
+    padding: 0 15px;
+  }
+  
   
   .filterContainer {
     justify-content: flex-start;

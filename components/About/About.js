@@ -42,9 +42,12 @@ const About = () => {
         <div className={styles.aboutGrid}>
           {/* Content Section */}
           <div 
+            // className={`${styles.contentSection} ${
+            //   isVisible ? styles.animateRight : ''
+            // }`}
             className={`${styles.contentSection} ${
-              isVisible ? styles.animateRight : ''
-            }`}
+    isVisible ? styles.animate : ''
+  }`}
           >
             <h2 className={styles.title}>
               A Journey From A Blank Slate To My Extraordinary Story!
@@ -95,9 +98,12 @@ const About = () => {
 
           {/* Image Section */}
           <div 
+            // className={`${styles.imageSection} ${
+            //   isVisible ? styles.animateLeft : ''
+            // }`}
             className={`${styles.imageSection} ${
-              isVisible ? styles.animateLeft : ''
-            }`}
+    isVisible ? styles.animate : ''
+  }`}
           >
             <div className={styles.imageContainer}>
               <div className={styles.glowBorder}></div>

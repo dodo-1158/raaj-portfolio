@@ -22,7 +22,7 @@
   align-items: center;
 }
 
-.contentSection {
+/* .contentSection {
   opacity: 0;
   transform: translateX(100px);
   transition: all 1s ease-out;
@@ -32,7 +32,6 @@
   transform: translateX(0);
 }
 
-/* Animate Left (Image) */
 .imageSection {
   opacity: 0;
   transform: translateX(-100px);
@@ -41,7 +40,28 @@
 .imageSection.animateLeft {
   opacity: 1;
   transform: translateX(0);
+} */
+
+/* Content (off-screen left → center) */
+.contentSection {
+  position: relative;
+  transform: translateX(-100vw);   /* fully off the screen to the left */
+  transition: transform 1s ease-out;
 }
+.contentSection.animate {
+  transform: translateX(0);        /* slide to its natural position */
+}
+
+/* Image (off-screen right → center) */
+.imageSection {
+  position: relative;
+  transform: translateX(100vw);    /* fully off the screen to the right */
+  transition: transform 1s ease-out;
+}
+.imageSection.animate {
+  transform: translateX(0);        /* slide to its natural position */
+}
+
 
 
 .title {

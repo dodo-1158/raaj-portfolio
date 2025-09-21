@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect , useRef} from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,6 +14,8 @@ import Work from '@/components/Work/Work';
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [fadeIn, setFadeIn] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const slides = [
     {
@@ -37,7 +39,6 @@ export default function Home() {
       subText: "",
       backgroundImage: "/homepage-3.jpg" // Camera equipment image
     }
-
   ];
 
   useEffect(() => {
@@ -51,6 +52,30 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    
+    const onResize = () => {
+      if (window.innerWidth > 1024) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onResize);
+    };
+  }, []);
+
   const nextSlide = () => {
     setCurrentSlide(prev => (prev + 1) % slides.length);
   };
@@ -58,44 +83,87 @@ export default function Home() {
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
- const [isScrolled, setIsScrolled] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(prev => !prev);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
   useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) { // Adjust threshold as needed
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
       }
     };
-    window.addEventListener('scroll', onScroll);
-
-    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
-
     <main className={styles.main}>
       <nav className={`${styles.navbar} ${isScrolled ? styles.navScrolled : ''}`}>
-        <div >
-          <div>
-            <Link href="/">
-            <Image src="/Raaj-Logo1.png" alt="Logo"  width={150}   // set width in px
-  height={0}   
-  style={{ height: "auto" }} 
-  className={styles.navLogo} />
-  </Link>
-          </div>
-          
+        <div>
+          <Link href="/">
+            <Image 
+              src="/Raaj-Logo1.png" 
+              alt="Logo"  
+              width={150}   
+              height={0}   
+              style={{ height: "auto" }} 
+              className={styles.navLogo} 
+            />
+          </Link>
         </div>
         
-
+        {/* Desktop Navigation Links */}
         <div className={styles.navLinks}>
-          <a href="#about"  className={styles.navLink}>ABOUT ME</a>
+          <a href="#about" className={styles.navLink}>ABOUT ME</a>
           <a href="#work" className={styles.navLink}>MY WORK</a>
           <a href="#gallery" className={styles.navLink}>GALLERY</a>
           <a href="/contact" className={styles.navLink}>CONTACT ME</a>
         </div>
+
+        {/* Burger Menu with FontAwesome Icons */}
+        <div className={styles.burgerMenu} onClick={toggleMobileMenu}>
+          <i className={isMobileMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
+        </div>
       </nav>
+
+      {/* Mobile Menu */}
+      <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.open : ''}`}>
+        <a href="#about" className={styles.mobileNavLink} onClick={closeMobileMenu}>
+          ABOUT ME
+        </a>
+        <a href="#work" className={styles.mobileNavLink} onClick={closeMobileMenu}>
+          MY WORK
+        </a>
+        <a href="#gallery" className={styles.mobileNavLink} onClick={closeMobileMenu}>
+          GALLERY
+        </a>
+        <a href="/contact" className={styles.mobileNavLink} onClick={closeMobileMenu}>
+          CONTACT ME
+        </a>
+      </div>
 
       {/* Hero Carousel */}
       <section className={`${styles.heroCarousel} ${fadeIn ? styles.fadeIn : ''}`}>
@@ -110,22 +178,21 @@ export default function Home() {
             }}
           >
             <div className={styles.slideContent}>
-              <div className={styles.textContent}>
-                <div className={`${styles.upperText} ${styles.slideInDown}`}>
-                  {slide.upperText}
+              <div key={currentSlide} className={styles.textContent}>
+                <div className={styles.upperText}>{slide.upperText}</div>
+
+                <div className={`${styles.mainText} ${styles.wave}`}>
+                  {slide.mainText.split("").map((char, i) => (
+                    <span key={i} style={{ animationDelay: `${i * 0.1}s` }}>
+                      {char === " " ? "\u00A0" : char}
+                    </span>
+                  ))}
                 </div>
-               <div className={`${styles.mainText} ${styles.slideInUp}`}>
-                  {slide.mainText}
-                </div> 
-                {slide.subText && (
-                  <div className={`${styles.subText} ${styles.slideInUp}`}>
-                    {slide.subText}
-                  </div>
-                )}
-                <Link href="/contact" passHref>
-                <button className={`${styles.cta} ${styles.slideInUp}`}>
-                  Hire Me Now
-                </button>
+
+                {slide.subText && <div className={styles.subText}>{slide.subText}</div>}
+
+                <Link href="/contact">
+                  <button className={styles.cta}>Hire Me Now</button>
                 </Link>
               </div>
             </div>
@@ -134,36 +201,32 @@ export default function Home() {
 
         {/* Navigation Arrows */}
         <button className={`${styles.navArrow} ${styles.prevArrow}`} onClick={prevSlide}>
-
           <span className={styles.icon}><i className="fa fa-chevron-left"></i></span>
-          
         </button>
         <button className={`${styles.navArrow} ${styles.nextArrow}`} onClick={nextSlide}>
          <span className={styles.icon}><i className="fa fa-chevron-right"></i></span>
         </button>
       </section>
 
-<section id="about">
-  <About />
-</section>
+      <section id="about" ref={sectionRef}>
+        <About />
+      </section>
 
-<section id="services">
-<Services />
-</section>
+      <section id="services">
+        <Services />
+      </section>
 
-<section id="work">
-  {/* My Work Content */}
-  <Work />
-</section>
+      <section id="work">
+        <Work />
+      </section>
 
-<section id="awards">
-<Awards />
-</section>
+      <section id="awards">
+        <Awards />
+      </section>
 
-<section id="gallery">
- <Projects />
-</section>
-
+      <section id="gallery">
+       <Projects />
+      </section>
     </main>
   );
 }

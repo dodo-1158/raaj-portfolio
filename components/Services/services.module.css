@@ -124,23 +124,12 @@ font-size: 2.5rem;
   }
   
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   
   .servicesGrid {
     gap: 35px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  
-  .iconContainer {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 25px;
-  }
-  
-  .serviceIcon {
-    width: 50px !important;
-    height: 50px !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
   
   .serviceTitle {
@@ -178,25 +167,12 @@ font-size: 2.5rem;
   }
   
   .servicesGrid {
-    gap: 40px;
-    grid-template-columns: 1fr;
-    max-width: 350px;
+    
+    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
   }
   
-  .serviceCard {
-    padding: 0 10px;
-  }
-  
-  .iconContainer {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 20px;
-  }
-  
-  .serviceIcon {
-    width: 45px !important;
-    height: 45px !important;
-  }
   
   .serviceTitle {
     font-size: 1.2rem;
@@ -232,17 +208,7 @@ font-size: 2.5rem;
     gap: 35px;
     max-width: 300px;
   }
-  
-  .iconContainer {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .serviceIcon {
-    width: 40px !important;
-    height: 40px !important;
-  }
-  
+
   .serviceTitle {
     font-size: 1.1rem;
   }
