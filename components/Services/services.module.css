@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+.servicesSection {
+  padding: 100px 0;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.title {
+  font-family: 'Merriweather', serif;
+font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: #999;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 300;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px) scale(0.8);
+}
+
+.serviceCard.bounceIn {
+  animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.iconContainer {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  transition: all 0.3s ease;
+}
+
+.iconContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+}
+.serviceIcon{
+    width: fit-content ;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.serviceTitle {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 20px 0;
+
+}
+
+.serviceDescription {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .servicesSection {
+    padding: 80px 0;
+  }
+  
+  .container {
+    padding: 0 30px;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+  
+  .servicesGrid {
+    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .iconContainer {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 25px;
+  }
+  
+  .serviceIcon {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  .serviceTitle {
+    font-size: 1.3rem;
+  }
+  
+  .serviceDescription {
+    font-size: 0.9rem;
+    max-width: 260px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .servicesSection {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 20px;
+  }
+  
+  .header {
+    margin-bottom: 60px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+  }
+  
+  .servicesGrid {
+    gap: 40px;
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
+  
+  .serviceCard {
+    padding: 0 10px;
+  }
+  
+  .iconContainer {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 20px;
+  }
+  
+  .serviceIcon {
+    width: 45px !important;
+    height: 45px !important;
+  }
+  
+  .serviceTitle {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .serviceDescription {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .servicesSection {
+    padding: 50px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 0.7rem;
+  }
+  
+  .servicesGrid {
+    gap: 35px;
+    max-width: 300px;
+  }
+  
+  .iconContainer {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .serviceIcon {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .serviceTitle {
+    font-size: 1.1rem;
+  }
+  
+  .serviceDescription {
+    font-size: 0.8rem;
+  }
+}

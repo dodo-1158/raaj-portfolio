@@ -1,0 +1,232 @@
+/* Navigation Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 200px;
+  background: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logoIcon {
+  background: linear-gradient(135deg, #ff6b35, #ff8c42);
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+
+.navLinks {
+  display: flex;
+  gap: 40px;
+}
+
+.navLink {
+  color: rgb(141, 141, 141);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #ff6b35, #ff8c42);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.navLink:hover {
+  color: #ff6b35;
+}
+
+/* Contact Page Styles */
+.contactPage {
+  min-height: 100vh;  /* Full height */
+  background: #fff;   /* White or any other color */
+  padding: 40px 20px 0px 20px;
+}
+
+.contactContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 30px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.subheading {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.card1 {
+  border: 1px solid #eee;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.card1 h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card1 h3:hover {
+  color: #ff5c00;
+  cursor: pointer;
+}
+
+.card2 {
+  border: 1px solid #eee;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.card2 h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #ff5c00;
+}
+
+.formHeading {
+  font-size: 2.5rem;
+  margin-top: 100px;
+}
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 0;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background: #fbf9f6;       /* soft beige background */
+  border: none;              /* remove border */
+  border-radius: 999px;      /* pill shape for inputs */
+  font-size: 1rem;
+  color: #000;               /* dark text */
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.form textarea {
+  min-height: 180px;
+  border-radius: 20px;       /* softer rectangle for textarea */
+  resize: vertical;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #aaa;               /* subtle placeholder */
+  font-size: 0.95rem;
+}
+
+.form input:focus,
+.form textarea:focus {
+ border: 1px solid #ff5c00;/* orange glow on focus */
+}
+
+/* Button Styles */
+.button {
+  background: white;
+  width: fit-content;
+  color: #ff5c00;
+  border: 2px solid #d8d8d8;
+  padding: 12px 24px;
+  border-radius: 999px;      /* pill button */
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.button:hover {
+  background: #ff5c00;
+  color: white;
+  border: 2px solid #ff5c00;
+
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+
+}
+.error {
+  color: red;
+  display: flex;
+ margin-left: 10px;
+ margin-top: 10px;
+  font-size: 0.8rem;
+  align-items: flex-start;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column; /* stack input + error vertically */
+  flex: 1; /* make inputs equal width in row */
+}
