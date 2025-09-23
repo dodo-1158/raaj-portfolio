@@ -167,17 +167,6 @@
 }
 
 .carouselWhiteBg {
-  /* position: absolute;
-  bottom: 0;
-  left: 0; 
-  right: 0;
-  width: 100vw;  
-  height: 60px;
-  background: white;
-  z-index: 1;
-  border-radius: 0;
-  padding-bottom: 20px; */
-
     position: absolute;
   bottom: 0;
   left: 0; 
@@ -365,6 +354,8 @@
   }
 
    .carouselWhiteBg {
-    height: 240px !important;  /* ✅ balance for small screens */
+    height: 240px !important; 
   }
+  
 }
+

@@ -190,12 +190,18 @@ const handleDeliveredEnd = (e) => {
                 >
                   <div className={styles.projectCard}>
                     <Image
+                      // src={`/${slide.image}`}
+                      // alt={slide.alt}
+                      // fill
+                      // style={{ objectFit: 'cover' }}
+                      // className={styles.projectImage}
+                      // priority={slide.isActive}
                       src={`/${slide.image}`}
-                      alt={slide.alt}
-                      fill
-                      style={{ objectFit: 'cover' }}
-                      className={styles.projectImage}
-                      priority={slide.isActive}
+  alt={slide.alt}
+  fill
+  style={{ objectFit: 'fill', overflow: 'hidden' }}
+  className={styles.projectImage}
+  priority={slide.isActive}
                     />
                     {!slide.isActive && <div className={styles.overlay}></div>}
                   </div>
