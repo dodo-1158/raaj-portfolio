@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
 .aboutSection {
+  margin-top: 50px;
   padding: 0px 50px 80px 50px;
   background-color: #ffffff;
   color: #000000;
-  min-height: 100vh;
+  min-height: 70vh;
   font-family: 'Arial', sans-serif;
  margin-left: 230px;
 }
@@ -153,6 +154,7 @@
   .aboutSection {
   margin-left: auto;  
   margin-right: auto;
+    margin-top: 50px;
 }
 
   .aboutGrid {
@@ -214,8 +216,7 @@
 
   .aboutSection {
     padding: 10px 20px;
-
-    
+margin-top: 0;
   }
 .textContent p{
   line-height: -0.1em;

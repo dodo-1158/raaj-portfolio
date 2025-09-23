@@ -2,13 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 .servicesSection {
-  padding: 100px 0;
+  padding: 0;
   background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   align-items: center;
   width: 100%;
   overflow: hidden; 
+
 }
 
 .container {
