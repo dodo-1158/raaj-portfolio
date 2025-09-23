@@ -6,7 +6,7 @@
   padding: 80px 0 0 0;
   background: #222;
   overflow: hidden;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .container {
@@ -54,6 +54,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+ 
 }
 
 .navButton:first-of-type {
@@ -65,6 +66,7 @@
 }
 
 .carousel {
+  margin-top: 60px;
   flex: 1;
   display: flex;
   align-items: center;
@@ -83,6 +85,7 @@
   height: 355px;
   transition: transform 0.5s ease;
   will-change: transform;
+   padding-bottom: 100px; /* space for shadows */
 }
 
 .slide {
@@ -119,7 +122,8 @@
   border-radius: 5px;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
+  object-fit: contain;
   display: block;
   transition: filter 0.25s, transform 0.3s;
 }
@@ -163,7 +167,7 @@
 }
 
 .carouselWhiteBg {
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
   left: 0; 
   right: 0;
@@ -172,7 +176,16 @@
   background: white;
   z-index: 1;
   border-radius: 0;
-  padding-bottom: 20px;
+  padding-bottom: 20px; */
+
+    position: absolute;
+  bottom: 0;
+  left: 0; 
+  right: 0;
+  width: 100vw;  
+  height: 120px;   /* make this taller */
+  background: white;
+  z-index: 1;
 }
 
 /* Mobile styles - Major improvements */
@@ -197,9 +210,9 @@
   /* Increased carousel height to accommodate larger active slides */
   .carousel { 
     max-width: 100%;
-    height: 450px; /* Further increased height */
+    height: 450px; 
     touch-action: pan-x;
-    margin-top: 5px; /* Further reduced gap between subtitle and carousel */
+    margin-top: 5px; 
   }
   
   /* Increased slide container height and adjusted alignment */
@@ -218,18 +231,18 @@
   }
 
   .inactiveSlide {
-    opacity: 0.35; /* Further decreased opacity for more contrast */
+
     filter: brightness(0.6) grayscale(25%);
     transform: scale(0.8); /* Smaller scale for more contrast */
   }
 
-  /* Much more prominent active slide */
   .activeSlide {
-    transform: scale(1.4) !important; /* Even larger active slide */
+    transform: scale(1.3) !important; /* Even larger active slide */
     opacity: 1;
     filter: none;
     z-index: 10;
     box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 5px 15px rgba(0,0,0,0.3); /* Reduced shadow */
+    margin-bottom: 20px;
   }
 
   .projectCard {
@@ -259,7 +272,7 @@
   
   /* Much larger white background to accommodate drop shadows */
   .carouselWhiteBg {
-    height: 180px !important; /* Even larger white section */
+    height: 280px !important;  /* ✅ much taller for big drop shadow */
   }
 
   .header {
@@ -275,11 +288,7 @@
   .navButton:last-of-type {
     right: 100px;
   }
-  
 
-  .carouselWhiteBg {
-    height: 100px; /* Increased from default 60px */
-  }
 }
 
 @media (min-width: 768px) and (max-width: 920px) {
@@ -290,12 +299,16 @@
     right: 180px;
   }
   
-  /* Even larger white background for smaller tablets */
-  .carouselWhiteBg {
-    height: 120px; /* Increased for better floating effect */
-  }
 }
 
+@media (min-width: 601px) and (max-width: 768px) {
+   .navButton:first-of-type {
+    left: -10px;
+  }
+  .navButton:last-of-type {
+    right: -10px;
+}
+}
 /* Small mobile phones */
 @media (max-width: 600px) {
   .carouselContainer {
@@ -305,15 +318,17 @@
   
   .carousel { 
     max-width: 100%;
-    height: 420px; /* Increased */
+    height: 520px; /* Increased */
     margin-top: 0px; /* Minimal gap for small screens */
     touch-action: pan-x;
   }
   
   .slideContainer {
-    height: 420px; /* Increased */
+   
+    height: 520px; /* Increased */
     gap: 12px;
-    padding-bottom: 70px; /* More padding for shadow */
+    padding-bottom: 100px; /* More padding for shadow */
+    margin-bottom: 10px;
   }
 
   .slide {
@@ -322,7 +337,7 @@
   }
   
   .activeSlide {
-    transform: scale(1.5) !important; /* Even larger on small screens */
+    transform: scale(1.33) !important; /* Even larger on small screens */
     box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 8px 18px rgba(0,0,0,0.4); /* Reduced shadow */
   }
 
@@ -335,11 +350,11 @@
   }
   
   .navButton:first-of-type {
-    left: -21px; 
+    left: -11px; 
   }
   
   .navButton:last-of-type {
-    right: -21px;
+    right: -11px;
     }
   
   .carouselWhiteBg { 
@@ -347,5 +362,9 @@
 
   .header {
     margin-bottom: 10px; 
+  }
+
+   .carouselWhiteBg {
+    height: 240px !important;  /* ✅ balance for small screens */
   }
 }

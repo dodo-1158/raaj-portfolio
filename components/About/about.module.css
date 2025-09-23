@@ -93,9 +93,18 @@
 }
 
 /* Image */
-.aboutImage {
+/* .aboutImage {
   width: 100%;
   height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+} */
+
+.aboutImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without stretching */
   overflow: hidden;
   border-radius: 12px;
   transition: transform 0.4s ease, filter 0.4s ease;
@@ -176,7 +185,7 @@
   }
 
   .aboutGrid {
-    gap: 24px;
+    gap: 16px;
   }
 
   .textContent p {
@@ -225,16 +234,31 @@ box-shadow: 0px 4px 30px -5px rgba(78,78,78,0.52);
       width: 100%;
 height: 500px;
 overflow: hidden;
-
-  
 }
 }
 
 
 @media (max-width: 368px){
-.aboutImage {
+/* .imageContainer{
   width: 100%;
-height: 400px;
-overflow: hidden;
-  }
+  margin: 0;
+  height: 300px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 4px 30px -5px rgba(78,78,78,0.52); 
+box-shadow: 0px 4px 30px -5px rgba(78,78,78,0.52);
+
+} */
+
+
+   .aboutImage {
+      /* width: 100%;
+height: 300px;
+overflow: hidden; */
+ width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without stretching */
+  overflow: hidden;
+
+  
+}
 }
