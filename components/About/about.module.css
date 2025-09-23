@@ -209,6 +209,7 @@
     font-size: 14px;
   }
    .aboutImage {
+    width: 100%;
     height: 400px;
   }
 }
@@ -231,6 +232,17 @@
   line-height: -0.1em;
 }
    .aboutImage {
-    height: 400px;
+      width: 100%;
+height: 500px;
+overflow: hidden;
   }
 }}
+
+
+@media (max-width: 368px){
+.aboutImage {
+  width: 100%;
+height: 400px;
+overflow: hidden;
+  }
+}

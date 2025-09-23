@@ -119,7 +119,7 @@ export const videos = [
     videoId: 'VCtK0lqEig4',
     thumbnail: '/thumbnails/india-without-water-production-design.jpg'
   },
-  ,
+  
   {
     id: 13,
     title: 'Teaser – Glaani ( Short Film)',
