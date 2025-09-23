@@ -41,8 +41,8 @@ const Projects = () => {
   const slides = [];
   // Show fewer slides on small screens
   const isSmallScreen = typeof window !== 'undefined' ? window.innerWidth <= 768 : false;
-  // const range = isSmallScreen ? 1 : 2; 
-  const range = window.innerWidth <= 768 ? 1 : 2;
+  const range = isSmallScreen ? 1 : 2; 
+  // const range = window.innerWidth <= 768 ? 1 : 2;
 
   for (let i = -range; i <= range; i++) {
     const idx = (current + i + count) % count;
