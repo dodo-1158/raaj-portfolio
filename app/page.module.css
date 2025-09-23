@@ -216,7 +216,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -423,6 +423,16 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     height: 80px;
   }
+
+  .slide{
+    margin-top: 80px;
+    height: 90vh;
+  }
+
+     .slide:nth-child(1) {
+    background-position: 70% center; 
+ 
+  }
   
   .navScrolled {
     background-color: white;
@@ -486,6 +496,17 @@
   .mobileNavLink {
     font-size: 24px;
   }
+
+  .heroCarousel {
+  height: 90vh;
+}
+
+  .slide{
+    width: 100%;
+    height: calc(80px + 100vh);
+    margin-top: 70px;
+    background-size: cover;
+  }
   
   .slide.active .mainText { 
     font-size: 40px; 
@@ -533,12 +554,20 @@
   .burgerMenu i {
     font-size: 20px;
   }
-/*   
+  
   .slide{
     width: 100%;
-    height: 100vh;
-    object-fit: contain;
-  } */
+    height: 85vh;
+    /* object-fit: contain; */
+     margin-top: 60px;
+    
+  }
+  
+   .slide:nth-child(1) {
+    background-position: 80% center; 
+    /* adjust differently on mobile */
+  }
+
   .slide.active .mainText { 
     font-size: 32px; 
     letter-spacing: 1px; 

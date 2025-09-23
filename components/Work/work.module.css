@@ -44,6 +44,7 @@ font-size: 2.5rem;
 }
 
 .filterButton {
+  margin-top: 5px;
   padding: 12px 24px;
   border: 1px solid #e0e0e0;
   background: #ffffff;
