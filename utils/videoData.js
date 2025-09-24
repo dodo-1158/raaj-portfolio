@@ -483,15 +483,15 @@ export const videos = [
     videoId: 'hy4y232vAoo',
     thumbnail: '/thumbnails/amazon-cutlery.jpg'
   },
-  //  {
-  //   id: 53,
-  //   title: 'Arré Siren Uss Type Ki Ladki Music Anthem',
-  //   slug: 'arré-siren-uss-type-ki-ladki-music-anthem',
-  //   categories: ['MUSIC VIDEO'],
-  //   youtubeUrl: ' https://youtu.be/iscLBa78q1w?list=PLcvCQa6KHYRmJ7YHDJdnlFUaNSrYOVzgo',
-  //   videoId: 'iscLBa78q1w?list=PLcvCQa6KHYRmJ7YHDJdnlFUaNSrYOVzgo',
-  //   thumbnail: '/thumbnails/arré-siren-uss-type-ki-ladki-music-anthem.jpg'
-  // }
+   {
+    id: 53,
+    title: 'Arré Siren Uss Type Ki Ladki Music Anthem',
+    slug: 'arré-siren-uss-type-ki-ladki-music-anthem',
+    categories: ['EDITING'],
+    youtubeUrl: ' https://youtu.be/iscLBa78q1w',
+    videoId: 'iscLBa78q1w',
+    thumbnail: '/thumbnails/arré-siren-uss-type-ki-ladki-music-anthem.jpg'
+  }
 
 ]
 ;
