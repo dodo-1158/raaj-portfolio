@@ -145,7 +145,7 @@ const Awards = () => {
         {/* Mobile carousel */}
         <div className={styles.carousel}>
           <button className={styles.prev} onClick={prevSlide}>
-  <i class="fa-solid fa-chevron-left"></i>
+  <i className="fa-solid fa-chevron-left"></i>
 </button>
 
 
@@ -160,7 +160,7 @@ const Awards = () => {
           </div>
 
           <button className={styles.next} onClick={nextSlide}>
-  <i class="fa-solid fa-chevron-right"></i>
+  <i className="fa-solid fa-chevron-right"></i>
 </button>
         </div>
       </div>
