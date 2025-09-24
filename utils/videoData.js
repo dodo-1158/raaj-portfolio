@@ -7,7 +7,8 @@ export const categories = [
   'DIRECTION',
   'EDITING',
   'PRODUCTION DESIGN',
-  'WRITING'
+  'WRITING',
+
 ];
 
 export const videos = [
@@ -38,15 +39,15 @@ export const videos = [
     videoId: 'o1N4qSfbmZs',
     thumbnail: '/thumbnails/judgementall-hai-kya-shorts.jpg'
   },
-  // {
-  //   id: 4,
-  //   title: 'Date With A Chudail – Shorts',
-  //   slug: 'date-with-a-chudail-shorts',
-  //   categories: ['CAMERA', 'COLOR GRADING'],
-  //   youtubeUrl: 'https://youtu.be/example-chudail',
-  //   videoId: 'example-chudail',
-  //   thumbnail: '/thumbnails/date-with-a-chudail-shorts.jpg'
-  // },
+  {
+    id: 4,
+    title: 'Date With A Chudail – Shorts',
+    slug: 'date-with-a-chudail-shorts',
+    categories: ['CAMERA', 'COLOR GRADING'],
+    youtubeUrl: 'https://youtu.be/tZ0ZCmkYE0E',
+    videoId: 'tZ0ZCmkYE0E',
+    thumbnail: '/thumbnails/date-with-a-chudail-shorts.jpg'
+  },
   {
     id: 5,
     title: 'Bhola Tero Naam – Official Music Video',
@@ -56,15 +57,16 @@ export const videos = [
     videoId: 'DQtRUnNVTpA',
     thumbnail: '/thumbnails/bhola-tero-naam-music-video.jpg'
   },
-  // {
-  //   id: 6,
-  //   title: 'Mathched! – Short Film',
-  //   slug: 'mathched-short-film',
-  //   categories: ['COLOR GRADING', 'EDITING'],
-  //   youtubeUrl: 'https://youtu.be/yXP4PE2Kywo',
-  //   videoId: 'yXP4PE2Kywo',
-  //   thumbnail: '/thumbnails/mathched-short-film.jpg'
-  // },
+  {
+    id: 6,
+    title: 'Mathched! – Short Film',
+    slug: 'mathched-short-film',
+    categories: ['COLOR GRADING', 'EDITING'],
+    youtubeUrl: 'https://youtu.be/U_J8PfNzcws',
+    videoId: 'U_J8PfNzcws',
+    thumbnail: '/thumbnails/mathched-short-film.jpg'
+  },
+
   {
     id: 7,
     title: 'Mera Pahad Mera Himala – Official Music Video',
@@ -390,24 +392,25 @@ export const videos = [
     videoId: 'Auszml4udKI',
     thumbnail: '/thumbnails/how-to-pass-an-exam-sketch.jpg'
   },
-  // {
-  //   id: 43,
-  //   title: 'Kabaddi Mantra: Raiders vs Defenders',
-  //   slug: 'kabaddi-mantra-raiders-vs-defenders',
-  //   categories: ['EDITING'],
-  //   youtubeUrl: 'https://youtu.be/WXqbs-pqOg8',
-  //   videoId: 'WXqbs-pqOg8',
-  //   thumbnail: '/thumbnails/kabaddi-mantra-raiders-vs-defenders.jpg'
-  // },
-  // {
-  //   id: 44,
-  //   title: 'Kabaddi Mantra: The workings of a Kabaddi Match',
-  //   slug: 'kabaddi-mantra-the-workings-of-a-kabaddi-match',
-  //   categories: ['EDITING'],
-  //   youtubeUrl: 'https://youtu.be/3eWaBGYmH7o',
-  //   videoId: '3eWaBGYmH7o',
-  //   thumbnail: '/thumbnails/kabaddi-mantra-the-workings-of-a-kabaddi-match.jpg'
-  // },
+
+  {
+    id: 43,
+    title: 'Kabaddi Mantra: Raiders vs Defenders',
+    slug: 'kabaddi-mantra-raiders-vs-defenders',
+    categories: ['EDITING'],
+    youtubeUrl: 'https://youtu.be/WXqbs-pqOg8',
+    videoId: 'WXqbs-pqOg8',
+    thumbnail: '/thumbnails/kabaddi-mantra-raiders-vs-defenders.jpg'
+  },
+  {
+    id: 44,
+    title: 'Kabaddi Mantra: The workings of a Kabaddi Match',
+    slug: 'kabaddi-mantra-the-workings-of-a-kabaddi-match',
+    categories: ['EDITING'],
+    youtubeUrl: 'https://youtu.be/3eWaBGYmH7o',
+    videoId: '3eWaBGYmH7o',
+    thumbnail: '/thumbnails/kabaddi-mantra-the-workings-of-a-kabaddi-match.jpg'
+  },
   {
     id: 45,
     title: 'Kabaddi Mantra: The lines that rule the court!',
@@ -417,15 +420,15 @@ export const videos = [
     videoId: 'Pg0HeHURa1s',
     thumbnail: '/thumbnails/kabaddi-mantra-the-lines-that-rule-the-court.jpg'
   },
-  // {
-  //   id: 46,
-  //   title: 'Kabaddi Mantra: Super tackles, empty raids and pursuits',
-  //   slug: 'kabaddi-mantra-super-tackles-empty-raids-pursuits',
-  //   categories: ['EDITING'],
-  //   youtubeUrl: 'https://youtu.be/_zRPMciaiMI',
-  //   videoId: '_zRPMciaiMI',
-  //   thumbnail: '/thumbnails/kabaddi-mantra-super-tackles-empty-raids-pursuits.jpg'
-  // },
+  {
+    id: 46,
+    title: 'Kabaddi Mantra: Super tackles, empty raids and pursuits',
+    slug: 'kabaddi-mantra-super-tackles-empty-raids-pursuits',
+    categories: ['EDITING'],
+    youtubeUrl: 'https://youtu.be/_zRPMciaiMI',
+    videoId: '_zRPMciaiMI',
+    thumbnail: '/thumbnails/kabaddi-mantra-super-tackles-empty-raids-pursuits.jpg'
+  },
   {
     id: 47,
     title: 'Kabaddi Mantra: The tale of the sentinels',
@@ -435,15 +438,15 @@ export const videos = [
     videoId: 'pi0jup2npag',
     thumbnail: '/thumbnails/kabaddi-mantra-the-tale-of-the-sentinels.jpg'
   },
-  // {
-  //   id: 48,
-  //   title: 'Asian Paints Apcolite Gold Heist',
-  //   slug: 'asian-paints-apcolite-gold-heist',
-  //   categories: ['EDITING'],
-  //   youtubeUrl: 'https://youtu.be/O-_jiXNrlKg',
-  //   videoId: 'O-_jiXNrlKg',
-  //   thumbnail: '/thumbnails/asian-paints-apcolite-gold-heist.jpg'
-  // },
+  {
+    id: 48,
+    title: 'Asian Paints Apcolite Gold Heist',
+    slug: 'asian-paints-apcolite-gold-heist',
+    categories: ['EDITING'],
+    youtubeUrl: 'https://youtu.be/O-_jiXNrlKg',
+    videoId: 'O-_jiXNrlKg',
+    thumbnail: '/thumbnails/asian-paints-apcolite-gold-heist.jpg'
+  },
   {
     id: 49,
     title: 'The Chetak Silent Factory | Chetak Electric Scooter Manufacturing Unit',
@@ -479,7 +482,17 @@ export const videos = [
     youtubeUrl: 'https://youtu.be/hy4y232vAoo',
     videoId: 'hy4y232vAoo',
     thumbnail: '/thumbnails/amazon-cutlery.jpg'
-  }
+  },
+  //  {
+  //   id: 53,
+  //   title: 'Arré Siren Uss Type Ki Ladki Music Anthem',
+  //   slug: 'arré-siren-uss-type-ki-ladki-music-anthem',
+  //   categories: ['MUSIC VIDEO'],
+  //   youtubeUrl: ' https://youtu.be/iscLBa78q1w?list=PLcvCQa6KHYRmJ7YHDJdnlFUaNSrYOVzgo',
+  //   videoId: 'iscLBa78q1w?list=PLcvCQa6KHYRmJ7YHDJdnlFUaNSrYOVzgo',
+  //   thumbnail: '/thumbnails/arré-siren-uss-type-ki-ladki-music-anthem.jpg'
+  // }
+
 ]
 ;
 
@@ -487,11 +500,17 @@ export const getVideoBySlug = (slug) => {
   return videos.find(video => video.slug === slug);
 };
 
+// export const getVideosByCategory = (category) => {
+//   if (category.toLowerCase() === 'all') return videos;
+//   return videos.filter(video => 
+//     video.categories.some(cat => 
+//       cat.toLowerCase().replace(/\s+/g, '-') === category.toLowerCase()
+//     )
+//   );
+// };
 export const getVideosByCategory = (category) => {
-  if (category.toLowerCase() === 'all') return videos;
-  return videos.filter(video => 
-    video.categories.some(cat => 
-      cat.toLowerCase().replace(/\s+/g, '-') === category.toLowerCase()
-    )
+  const normalizedCategory = category.toLowerCase();
+  return videos.filter(video =>
+    video.categories.some(c => c.toLowerCase() === normalizedCategory)
   );
 };

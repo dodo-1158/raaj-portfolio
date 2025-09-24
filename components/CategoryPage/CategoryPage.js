@@ -35,7 +35,7 @@ const CategoryPage = ({ categoryFormatted, videos }) => {
                 <div
                   className={styles.thumbnail}
                   style={{
-                    backgroundImage: `url(https://img.youtube.com/vi/${video.videoId}/maxresdefault.jpg)`
+                    backgroundImage: `url(https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg)`
                   }}
                 />
               </div>
