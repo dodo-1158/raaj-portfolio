@@ -25,7 +25,7 @@ export const videos = [
     id: 2,
     title: 'Binsar Mahadev – Documentary',
     slug: 'binsar-mahadev-documentary',
-    categories: ['DIRECTION'],
+    categories: ['DIRECTION', 'EDITING'],
     youtubeUrl: 'https://youtu.be/PtnAPtaYSW0',
     videoId: 'PtnAPtaYSW0',
     thumbnail: '/thumbnails/binsar-mahadev-documentary.jpg'
@@ -491,7 +491,34 @@ export const videos = [
     youtubeUrl: ' https://youtu.be/iscLBa78q1w',
     videoId: 'iscLBa78q1w',
     thumbnail: '/thumbnails/arré-siren-uss-type-ki-ladki-music-anthem.jpg'
-  }
+  },
+   {
+    id: 54,
+    title: 'Sticky Wicket EP 1',
+    slug: 'sticky-wicket-ep-1',
+    categories: ['COLOR GRADING'],
+    youtubeUrl: 'https://youtu.be/8VWmR3Rd6P8',
+    videoId: '8VWmR3Rd6P8',
+    thumbnail: '/thumbnails/sticky-wicket-ep-1.jpg'
+  },
+   {
+    id: 55,
+    title: 'Sticky Wicket EP 2',
+    slug: 'sticky-wicket-ep-2',
+    categories: ['COLOR GRADING'],
+    youtubeUrl: 'https://youtu.be/TDaN_6v5Dss',
+    videoId: 'TDaN_6v5Dss',
+    thumbnail: '/thumbnails/sticky-wicket-ep-2.jpg'
+  },
+  //  {
+  //   id: 56,
+  //   title: 'Sticky Wicket EP 2',
+  //   slug: 'sticky-wicket-ep-2',
+  //   categories: ['COLOR GRADING'],
+  //   youtubeUrl: 'https://youtu.be/TDaN_6v5Dss',
+  //   videoId: 'TDaN_6v5Dss',
+  //   thumbnail: '/thumbnails/sticky-wicket-ep-2.jpg'
+  // }
 
 ]
 ;
