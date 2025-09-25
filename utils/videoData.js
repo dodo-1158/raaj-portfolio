@@ -25,7 +25,7 @@ export const videos = [
     id: 2,
     title: 'Binsar Mahadev – Documentary',
     slug: 'binsar-mahadev-documentary',
-    categories: ['DIRECTION', 'EDITING'],
+    categories: ['DIRECTION'],
     youtubeUrl: 'https://youtu.be/PtnAPtaYSW0',
     videoId: 'PtnAPtaYSW0',
     thumbnail: '/thumbnails/binsar-mahadev-documentary.jpg'
