@@ -238,14 +238,12 @@
   padding: 0 20px;
 }
 
-/* Reset animations for inactive slides */
 .slide:not(.active) .textContent * {
   animation: none !important;
   opacity: 0;
   transform: translateY(50px);
 }
 
-/* Only animate content for active slides */
 .slide.active .textContent {
   animation: slideInContent 0.8s ease-out;
 }
@@ -498,15 +496,16 @@
   }
 
   .heroCarousel {
-  height: 90vh;
+  height: 100vh;
 }
 
   .slide{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     margin-top: 70px;
     background-size: cover;
     margin-bottom: 0px;
+
   }
   
   .slide.active .mainText { 
@@ -571,18 +570,19 @@
   
   .slide{
     width: 100%;
-    height: 75vh;
-    /* object-fit: contain; */
+    height: 85vh;
      margin-top: 60px;
-    margin-bottom: 0;
-    
+    margin-bottom: 0; 
   }
   .heroCarousel {
   height: 85vh;
 }
-
+.slideContent{
+  margin-top: 20px;
+}
    .slide:nth-child(1) {
-    background-position: 80% center; 
+    background-position: 75% center;
+   
   }
 
    .slide:nth-child(2) {
@@ -594,11 +594,11 @@
   }
 
   .slide.active .mainText { 
-    font-size: 32px; 
+    font-size: 25px; 
     letter-spacing: 1px; 
   }
   .slide.active .upperText { 
-    font-size: 22px; 
+    font-size: 20px; 
   }
   .slide.active .subText { 
     font-size: 12px; 

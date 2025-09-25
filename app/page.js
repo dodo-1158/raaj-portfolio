@@ -218,7 +218,8 @@ export default function Home() {
               index === currentSlide ? styles.active : ''
             }`}
             style={{
-              backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${slide.backgroundImage})`
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), 
+              url(${slide.backgroundImage})`
             }}
           >
             <div className={styles.slideContent}>

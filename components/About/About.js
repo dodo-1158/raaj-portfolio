@@ -113,6 +113,7 @@ const About = () => {
                 className={styles.aboutImage}
                 height={400}
                 width={400}
+                priority
               />
             </div>
           </div>
