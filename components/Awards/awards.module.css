@@ -227,11 +227,7 @@
     font-size: 0.7rem;
   }
   
-  /* .awardsGrid {
-    gap: 20px;
-
-  }
-  
+  /*
   .awardImage {
     margin-top: 0;
     max-width: 100%;
@@ -246,9 +242,16 @@
     display: flex;
   }
 
-  .awardImage {
+  /* .awardImage {
     max-width: 250px;
     max-height: 150px;
+  } */
+  .awardImage {
+   padding-bottom: 0;
+    margin-bottom: 40px;
+    height: 400px;
+    width: auto;
+    max-width: 500px;      
   }
 }
 
@@ -266,9 +269,12 @@
     max-width: 100%;
     max-height: 120px;
   } */
-
-  .awardImage {
-    max-width: 200px;
-    max-height: 120px;
+ 
+   .awardImage {
+    padding-bottom: 0;
+    margin-bottom: 40px;
+    height: 400px;
+    width: auto;
+    max-width: 500px;   /* slightly smaller on very small devices */
   }
 }

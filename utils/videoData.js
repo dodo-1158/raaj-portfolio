@@ -19,7 +19,7 @@ export const videos = [
     categories: ['DIRECTION', 'EDITING'],
     youtubeUrl: 'https://youtu.be/uUa76ki7bVA',
     videoId: 'uUa76ki7bVA',
-    thumbnail: '/thumbnails/glaani-short-film.jpg'
+    thumbnail: '/thumbnails/glaani-thumbnail.jpg'
   },
   {
     id: 2,
@@ -129,7 +129,7 @@ export const videos = [
     categories: ['DIRECTION', 'EDITING'],
     youtubeUrl: 'https://youtu.be/rYF94tE_Nuc',
     videoId: 'rYF94tE_Nuc',
-    thumbnail: '/thumbnails/teaser-glaani-short-film.jpg'
+    thumbnail: '/thumbnails/glaani-thumbnail.jpg'
   },
   {
     id: 14,
@@ -509,16 +509,7 @@ export const videos = [
     youtubeUrl: 'https://youtu.be/TDaN_6v5Dss',
     videoId: 'TDaN_6v5Dss',
     thumbnail: '/thumbnails/sticky-wicket-ep-2.jpg'
-  },
-  //  {
-  //   id: 56,
-  //   title: 'Sticky Wicket EP 2',
-  //   slug: 'sticky-wicket-ep-2',
-  //   categories: ['COLOR GRADING'],
-  //   youtubeUrl: 'https://youtu.be/TDaN_6v5Dss',
-  //   videoId: 'TDaN_6v5Dss',
-  //   thumbnail: '/thumbnails/sticky-wicket-ep-2.jpg'
-  // }
+  }
 
 ]
 ;

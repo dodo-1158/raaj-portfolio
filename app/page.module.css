@@ -503,9 +503,10 @@
 
   .slide{
     width: 100%;
-    height: calc(80px + 100vh);
+    height: 90vh;
     margin-top: 70px;
     background-size: cover;
+    margin-bottom: 0px;
   }
   
   .slide.active .mainText { 
@@ -533,6 +534,19 @@
   .nextArrow {
     right: 15px;
   }
+
+   .slide:nth-child(1) {
+    background-position: 80% center; 
+  }
+
+   .slide:nth-child(2) {
+    background-position: 65% center; 
+  }
+
+   .slide:nth-child(3) {
+    background-position: 30% center; 
+  }
+  
 }
 
 @media (max-width: 480px) {
@@ -578,7 +592,7 @@
    .slide:nth-child(3) {
     background-position: 30% center; 
   }
-  
+
   .slide.active .mainText { 
     font-size: 32px; 
     letter-spacing: 1px; 

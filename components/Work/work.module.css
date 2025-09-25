@@ -73,13 +73,7 @@ font-size: 2.5rem;
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(255, 107, 53, 0.3);
 }
-/* 
-.videoGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 30px;
-  transition: opacity 0.3s ease;
-} */
+
 .videoGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Always 4 per row on desktop */
