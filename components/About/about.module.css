@@ -25,23 +25,21 @@
 
 .contentSection {
   position: relative;
-  transform: translateX(-100vw);   /* fully off the screen to the left */
+  transform: translateX(-100vw);   
   transition: transform 1s ease-out;
 }
 .contentSection.animate {
-  transform: translateX(0);        /* slide to its natural position */
+  transform: translateX(0) !important;        
 }
 
-/* Image (off-screen right → center) */
 .imageSection {
   position: relative;
-  transform: translateX(100vw);    /* fully off the screen to the right */
+  transform: translateX(100vw);    
   transition: transform 1s ease-out;
 }
 .imageSection.animate {
-  transform: translateX(0);        /* slide to its natural position */
+  transform: translateX(0) !important;        
 }
-
 
 .title {
     font-family: "Merriweather", serif  !important; 
@@ -131,7 +129,6 @@
   inset: 20px;
 }
 
-/* Hover → animate both image and glow */
 .imageContainer:hover .aboutImage {
   transform: scale(1.05);
   filter: brightness(1.1);
@@ -141,7 +138,6 @@
   opacity: 1;
 }
 
-/* Animated Gradient Flow */
 @keyframes gradientFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -149,7 +145,6 @@
 }
 
 
-/* Responsive Design */
 @media (max-width: 1024px) {
 
   .aboutSection {
@@ -250,12 +245,10 @@ transform: scale(1.05);
   object-fit: contain;
   overflow: hidden;
 }
-  .imageContainer{
- 
+  .imageContainer{ 
   width: 100%;
 height: 90%;
   margin: 0;
- 
 }
 }
 
