@@ -9,6 +9,7 @@ import Services from '@/components/Services/Services';
 import Awards from '@/components/Awards/Awards';
 import Projects from '@/components/Projects/Projects';
 import Work from '@/components/Work/Work';
+import WorkedWith from '@/components/WorkedWith/WorkedWith';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -267,6 +268,7 @@ export default function Home() {
 
       <section id="gallery">
        <Projects />
+       <WorkedWith />
       </section>
     </main>
   );

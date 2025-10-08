@@ -6,6 +6,7 @@
   padding: 80px 0 0 0;
   background: #222;
   /* overflow: hidden; */
+  margin-bottom: 50px;
 }
 
 .container {
@@ -74,7 +75,6 @@
   max-width: 1000px;
   position: relative;
   height: 355px;
-  /* touch-action: pan-x; */
    
 }
 
@@ -83,16 +83,17 @@
   align-items: flex-end;
   justify-content: center;
   gap: 20px;
-  height: 355px;
+  height: 455px; 
+  /* here */
   transition: transform 0.5s ease;
   will-change: transform;
-   padding-bottom: 100px; /* space for shadows */
+   padding-bottom: 100px; 
 }
 
 .slide {
   position: relative;
-  width: 235px;
-  height: 330px;
+  width: 290px;
+  height: 390px;
   cursor: grab;
   flex-shrink: 0;
   box-shadow: 0 10px 28px rgba(0,0,0,0.55);
@@ -101,7 +102,7 @@
 }
 
 .activeSlide {
-  transform: scale(1.08);
+  transform: scale(1.09);
   filter: none;
   box-shadow: 0 26px 60px rgba(0,0,0,0.47), 0 2px 8px rgba(0,0,0,0.18);
   z-index: 2;
@@ -123,7 +124,6 @@
   border-radius: 5px;
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
   object-fit: contain;
   display: block;
   transition: filter 0.25s, transform 0.3s;
@@ -166,6 +166,13 @@
   transform: scale(1.12) translateY(-50%);
   outline: none;
 }
+  .navButton:first-of-type {
+    left: -150px; 
+  }
+  
+  .navButton:last-of-type {
+    right: -150px; 
+  }
 
 .carouselWhiteBg {
     position: absolute;
@@ -177,6 +184,7 @@
   background: white;
   z-index: 1;
 }
+
 
 /* Mobile styles - Major improvements */
 @media (max-width: 768px) {
@@ -284,8 +292,18 @@
   .navButton:last-of-type {
     right: 180px;
   }
-  
 }
+
+@media (min-width: 921px) and (max-width: 1400px) {
+  .navButton:first-of-type {
+    left: 0px;
+  }
+  .navButton:last-of-type {
+    right: 0px;
+  }
+}
+
+
 
 @media (min-width: 601px) and (max-width: 768px) {
    .navButton:first-of-type {
