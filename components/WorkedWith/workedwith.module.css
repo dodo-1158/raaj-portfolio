@@ -120,13 +120,14 @@
     grid-row: 1;
   }
 
+  /* Bottom squares centered and larger */
   .gridItem:nth-child(3) {
-    grid-column: 1 / 2;
+    grid-column: 2 / 3;
     grid-row: 2;
   }
 
   .gridItem:nth-child(4) {
-    grid-column: 2 / 3;
+    grid-column: 3 / 4;
     grid-row: 2;
   }
 }
@@ -145,14 +146,3 @@
     grid-column: span 1;
   }
 }
-
-@media (max-width: 600px){
-  .title {
-    font-size: 1.8rem;
-  }
-  
-  .subtitle {
-    font-size: 0.65rem;
-  }
-}
-

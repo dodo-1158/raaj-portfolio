@@ -150,20 +150,6 @@ export default function Home() {
   ));
 };
 
-// const createWaveText = (text) => {
-//   return text.split(" ").map((word, wordIndex) => (
-//     <span 
-//       key={`${animationKey}-word-${wordIndex}`} 
-//       style={{ 
-//         animationDelay: `${0.6 + (wordIndex * 0.15)}s`,
-//         display: 'inline-block',
-//         marginRight: '0.3em' // Add space between words
-//       }}
-//     >
-//       {word}
-//     </span>
-//   ));
-// };
   return (
     <main className={styles.main}>
       <nav className={`${styles.navbar} ${isScrolled ? styles.navScrolled : ''}`}>
