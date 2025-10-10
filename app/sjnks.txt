@@ -1,3 +1,163 @@
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    height: 70px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .navScrolled {
+    background-color: white;
+  }
+  
+  .navLinks {
+    display: none;
+  }
+  
+  .burgerMenu {
+    display: block;
+  }
+  
+  .burgerMenu i {
+    color: #333;
+    font-size: 22px;
+  }
+
+  .mobileMenu {
+    top: 70px;
+    height: calc(100vh - 70px);
+  }
+
+  .mobileNavLink {
+    font-size: 24px;
+  }
+
+  .heroCarousel {
+  height: 100vh;
+}
+
+  .slide{
+    width: 100%;
+    /* width: 100%; */
+  height: 100%;
+  background-size: cover;
+  background-position: center top;
+    margin-top: 70px;
+    background-size: cover;
+    margin-bottom: 0px;
+
+  }
+  
+  .slide.active .mainText { 
+    font-size: 40px; 
+  }
+  .slide.active .upperText { 
+    font-size: 22px; 
+  }
+  .slide.active .subText { 
+    font-size: 14px; 
+  }
+  .slide.active .cta { 
+    padding: 12px 28px; 
+    font-size: 14px; 
+  }
+  
+  .navArrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .prevArrow {
+    left: 15px;
+  }
+  .nextArrow {
+    right: 15px;
+  }
+
+   .slide:nth-child(1) {
+    background-position: 80% center; 
+  }
+
+   .slide:nth-child(2) {
+    background-position: 65% center; 
+  }
+
+   .slide:nth-child(3) {
+    background-position: 30% center; 
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .mobileMenu {
+    top: 60px;
+    height: calc(100vh - 60px);
+    gap: 30px;
+  }
+
+  .mobileNavLink {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .burgerMenu i {
+    font-size: 20px;
+  }
+  
+  .slide{
+    width: 100%;
+  height: 100%;
+  /* background-size: cover;
+  background-position: center top;   */
+    /* Changed here from 85vh */
+     margin-top: 60px;
+    margin-bottom: 0; 
+  }
+
+.slideContent{
+  margin-top: 20px;
+}
+   .slide:nth-child(1) {
+    background-position: 75% center;
+   
+  }
+
+   .slide:nth-child(2) {
+    background-position: 65% center; 
+  }
+
+   .slide:nth-child(3) {
+    background-position: 30% center; 
+  }
+
+  .slide.active .mainText { 
+    font-size: 25px; 
+    letter-spacing: 1px; 
+  }
+  .slide.active .upperText { 
+    font-size: 20px; 
+  }
+  .slide.active .subText { 
+    font-size: 12px; 
+    letter-spacing: 1px; 
+  }
+  .slide.active .cta { 
+    padding: 10px 20px; 
+    font-size: 12px; 
+  }
+  .slideContent {
+    padding: 0 15px;
+  }
+}
+
+
+
+------------------------------------
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
 .body{
@@ -214,13 +374,41 @@
 }
 
 .slide {
-  position: absolute;
+  /* position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+
+   /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 1.2s ease-in-out;
@@ -426,14 +614,16 @@
 
   .slide{
     margin-top: 80px;
+    /* height: 90vh; */
     width: 100%;
-    height: 100%;
-    background-size: auto 100%;
-    background-position: center center;
+  height: 100%;
+  background-size: cover;
+  background-position: center top;
   }
 
-  .slide:nth-child(1) {
+     .slide:nth-child(1) {
     background-position: 70% center; 
+ 
   }
   
   .navScrolled {
@@ -500,16 +690,19 @@
   }
 
   .heroCarousel {
-    height: 100vh;
-  }
+  height: 100vh;
+}
 
   .slide{
     width: 100%;
-    height: 100%;
+    /* width: 100%; */
+  height: 100%;
+  background-size: cover;
+  background-position: center top;
     margin-top: 70px;
-    background-size: auto 100%;
-    background-position: center center;
+    background-size: cover;
     margin-bottom: 0px;
+
   }
   
   .slide.active .mainText { 
@@ -538,24 +731,21 @@
     right: 15px;
   }
 
-  .slide:nth-child(1) {
+   .slide:nth-child(1) {
     background-position: 80% center; 
   }
 
-  .slide:nth-child(2) {
+   .slide:nth-child(2) {
     background-position: 65% center; 
   }
 
-  .slide:nth-child(3) {
+   .slide:nth-child(3) {
     background-position: 30% center; 
   }
+  
 }
 
 @media (max-width: 480px) {
-
-   .heroCarousel {
-    height: 90vh;
-  }
   .navbar {
     height: 60px;
   }
@@ -576,28 +766,24 @@
   }
   
   .slide{
-    margin-top: 30px;
-    margin-bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-size: auto 90%;
-    background-position: center center;
-
+   
+     margin-top: 60px;
+    margin-bottom: 0; 
   }
 
-  .slideContent{
-    margin-top: 20px;
-  }
-
-  .slide:nth-child(1) {
+.slideContent{
+  margin-top: 20px;
+}
+   .slide:nth-child(1) {
     background-position: 75% center;
+   
   }
 
-  .slide:nth-child(2) {
+   .slide:nth-child(2) {
     background-position: 65% center; 
   }
 
-  .slide:nth-child(3) {
+   .slide:nth-child(3) {
     background-position: 30% center; 
   }
 
