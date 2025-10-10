@@ -600,12 +600,14 @@
   
   .slide{
     width: 100%;
-    height: 85vh;
+    height: 100vh;  
+    /* Changed here from 85vh */
      margin-top: 60px;
     margin-bottom: 0; 
   }
   .heroCarousel {
-  height: 85vh;
+  height: 100vh;
+      /* Changed here from 85vh */
 }
 .slideContent{
   margin-top: 20px;
