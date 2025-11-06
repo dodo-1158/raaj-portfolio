@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 .section {
   padding: 4rem 1rem;
   background: #FBF6F4;
@@ -18,13 +20,17 @@
 }
 
 .title {
-  font-family: 'Merriweather', serif;
+  /* font-family: 'Merriweather', serif; */
+  font-family: 'Playfair Display', serif;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 600;
   color: #111827;
   margin-bottom: 1rem;
 }
-
+.title h2{
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
 .subtitle {
   font-style: italic; 
   font-size: 0.875rem;

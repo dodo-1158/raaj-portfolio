@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 .servicesSection {
   padding: 0;
@@ -25,7 +25,7 @@
 }
 
 .title {
-  font-family: 'Merriweather', serif;
+  font-family: 'Playfair Display', serif;
    /* font-family: 'Merriweather', serif; */
   font-size: 2.5rem;
   font-weight: 600;
@@ -42,6 +42,7 @@
   text-transform: uppercase;
   margin: 0;
   font-weight: 300;
+  font-style: italic;
 }
 
 .servicesGrid {
@@ -88,7 +89,8 @@
 }
 
 .serviceTitle {
-  font-family: 'Merriweather', serif;
+  /* font-family: 'Merriweather', serif; */
+   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-weight: 600;
   color: #333;

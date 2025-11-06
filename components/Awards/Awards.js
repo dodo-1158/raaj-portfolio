@@ -59,7 +59,7 @@ const Awards = () => {
 
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Winning awards</h2>
+          <h2 className={styles.title}>Winning Awards</h2>
           <p className={styles.quote}>
             &quot;SUCCESS ISN&apos;T A DESTINATION, IT&apos;S A PATH YOU WALK. DREAM BOLDLY,<br />
             PUT IN THE EFFORT, AND REACH FOR EXCELLENCE&quot;

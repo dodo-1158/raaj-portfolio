@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 .projectsSection {
   position: relative;
   padding: 80px 0 0 0;
@@ -24,9 +28,10 @@
 }
 
 .title {
-  font-family: 'Merriweather', serif;
+  /* font-family: 'Merriweather', serif; */
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 600;
   color: #fff;
   margin: 0 0 30px 0;
   line-height: 1;

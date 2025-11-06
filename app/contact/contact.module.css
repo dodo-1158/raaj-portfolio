@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Navigation Styles */
 .navbar {
   position: fixed;
@@ -202,10 +204,11 @@
 }
 
 .heading {
-  font-family: 'Merriweather', serif;
+  /* font-family: 'Merriweather', serif; */
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .subheading {
@@ -257,9 +260,11 @@
 }
 
 .formHeading {
-  font-family: 'Merriweather', serif;
+  /* font-family: 'Merriweather', serif; */
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
-  margin-top: 100px;
+  font-weight: 700;
+  margin-top: 90px;
 }
 
 .form {

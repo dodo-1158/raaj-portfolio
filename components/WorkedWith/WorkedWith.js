@@ -170,7 +170,8 @@ export default function WorkedWith() {
           {/* Header */}
           <div className={styles.header}>
             <h2 className={styles.title}>
-              Notable Collaborations
+              {/* Notable Collaborations */}
+              Moments that shaped my journey
             </h2>
             <p className={styles.subtitle}>
               Bringing stories to life through partnerships with talented artists and visionaries
