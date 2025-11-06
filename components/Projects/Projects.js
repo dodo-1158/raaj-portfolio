@@ -9,8 +9,8 @@ const Projects = () => {
   const deliveredProjects = [
     { image: 'delivered-2.jpg', alt: 'Project 1' },
     { image: 'delivered-1.jpg', alt: 'Project 2' },
-    { image: 'delivered-3.jpg', alt: 'Project 3' },
-    { image: 'delivered-4.jpg', alt: 'Project 4' },
+    // { image: 'delivered-3.jpg', alt: 'Project 3' },
+    // { image: 'delivered-4.jpg', alt: 'Project 4' },
     { image: 'delivered-5.jpg', alt: 'Project 5' },
     { image: 'delivered-6.jpg', alt: 'Project 6' }
   ];
@@ -35,11 +35,8 @@ const Projects = () => {
   const upcomingStartX = useRef(null);
 
 
-
-
   function getVisibleSlides(projects, current, count) {
   const slides = [];
-  // Show fewer slides on small screens
   const isSmallScreen = typeof window !== 'undefined' ? window.innerWidth <= 768 : false;
   const range = isSmallScreen ? 1 : 2; 
   // const range = window.innerWidth <= 768 ? 1 : 2;
@@ -67,6 +64,7 @@ const Projects = () => {
   //   if (delta < -dragThreshold) setDeliveredCurrent((prev) => (prev + 1) % deliveredCount);
   //   deliveredStartX.current = null;
   // };
+
   const deliveredStartTime = useRef(null);
 
 const handleDeliveredStart = (e) => {

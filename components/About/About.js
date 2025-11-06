@@ -70,10 +70,7 @@ const About = () => {
                 50-Hour Filmmaking Challenge, 2014) and Glaani (official selection at 
                 Pune Short Film Festival, 2015). In 2019, I founded Vijesha Films. In 
                 2022, I produced my first project, Mera Pahad Mera Himala, a real-life 
-                inspired music video featured on Zee Music. Currently, I&apos;m working on 
-                a documentary based in Uttarakhand, also under my production 
-                company and I hope to keep entertaining you guys by 
-                doing more projects.
+                inspired music video featured on Zee Music.
               </p>
               
               <p>

@@ -24,7 +24,7 @@ export default function Home() {
       upperText: "My Story",
       mainText: "BEGINS HERE",
       subText: "I CAN GIVE YOU EVERYTHING YOU NEED!",
-      backgroundImage: "/homepage-1.jpg"
+      backgroundImage: "/homepage-4.jpg"
     },
     {
       id: 2,

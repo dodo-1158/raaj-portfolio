@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Figtree:ital,wght@0,300..900;1,300..900&family=Luxurious+Roman&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 .awardsSection {
   position: relative;
@@ -55,7 +55,8 @@
 
 .title {
    /* font-family: "Amarante", serif !important; */
-   font-family: cursive;
+  /* font-family: "Merriweather"; */
+   font-family: "Playfair Display", serif;
   font-size: 4rem;
   font-weight: 400;
   color: #ffffff;
@@ -80,9 +81,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 60px ;
   flex-wrap: wrap;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -93,8 +94,9 @@
 }
 
 .awardImage {
-  width: 100%;
+  width: 200%;
   height: 100px;
+  margin: 20px;
   filter: brightness(1.1);
   transition: all 0.3s ease;
 }

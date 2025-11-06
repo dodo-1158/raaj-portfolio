@@ -123,12 +123,7 @@ export default function ContactPage() {
             <p>raajdhoundiyal@gmail.com</p>
           </div>
 
-          <div className={styles.card2}>
-            <span className={styles.icon}><i className="fas fa-phone"></i></span>
-            <h3>Phone Number</h3>
-            <p>+91 9769231357</p>
-            <p>+91 9167452453</p>
-          </div>
+      
 
           <h2 className={styles.formHeading}>Leave us a message</h2>
           <p className={styles.subheading}>LET&apos;S MAKE GREAT THINGS TOGETHER</p>
@@ -149,6 +144,16 @@ export default function ContactPage() {
                 <input
                   type="email"
                   placeholder="Your email *"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                />
+                {errors.email && <small className={styles.error}>{errors.email}</small>}
+              </div>
+
+               <div className={styles.inputGroup}>
+                <input
+                  type="phone"
+                  placeholder="Phone Number *"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                 />
@@ -184,3 +189,16 @@ export default function ContactPage() {
     </>
   );
 }
+
+
+    // <div className={styles.card2}>
+    //         <span className={styles.icon}><i className="fas fa-phone"></i></span>
+    //         <h3>Phone Number</h3>
+    //         <p>+91 9769231357</p>
+    //         <p>+91 9167452453</p>
+    //       </div>
+
+
+
+    // Moments that shaped my journey...
+    // news and pune film festival 
