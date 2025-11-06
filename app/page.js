@@ -503,13 +503,14 @@ export default function Home() {
                 </div>
 
                 {slide.subText && <div className={styles.subText}>{slide.subText}</div>}
-{/* 
+
                 <Link href="/contact">
                   <button className={styles.cta}>Hire Me Now</button>
-                </Link> */}
-                <a href="/contact">
+                </Link>
+                {/* <a href="/contact">
                   <button className={styles.cta}>Hire Me Now</button>
-                </a>
+                </a> */}
+                
               </div>
             </div>
           </div>

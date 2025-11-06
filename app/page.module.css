@@ -857,6 +857,7 @@
 
 .slide.active {
   opacity: 1;
+    z-index: 2;
 }  
 
 .slideContent {
@@ -1158,6 +1159,7 @@
     background-size: auto 100%;
     background-position: center center;
     margin-bottom: 0px;
+    
   }
   
   .slide.active .mainText { 
