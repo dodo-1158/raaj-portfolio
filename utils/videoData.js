@@ -509,6 +509,24 @@ export const videos = [
     youtubeUrl: 'https://youtu.be/TDaN_6v5Dss',
     videoId: 'TDaN_6v5Dss',
     thumbnail: '/thumbnails/sticky-wicket-ep-2.jpg'
+  },
+   {
+    id: 56,
+    title: 'Shahrukh Khan Ra.One Making Complete',
+    slug: 'shahrukh-khan-ra-one-making-complete',
+    categories: ['EDITING'],
+    youtubeUrl: 'https://youtu.be/jg7vSNY0t9Q',
+    videoId: 'jg7vSNY0t9Q',
+    thumbnail: '/thumbnails/shahrukh-khan-ra-one-making-complete.jpg'
+  },
+  {
+    id: 57,
+    title: 'RASCALS song making',
+    slug: 'rascals-song-making',
+    categories: ['EDITING'],
+    youtubeUrl: 'https://youtu.be/DEZh3M1Pmns',
+    videoId: 'DEZh3M1Pmns',
+    thumbnail: '/thumbnails/rascals-song-making.jpg'
   }
 
 ]
