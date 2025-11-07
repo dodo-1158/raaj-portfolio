@@ -224,9 +224,9 @@
 
 /* Responsive Design */
 @media (min-width: 768px) {
-  /* .title {
+  .title {
     font-size: 3rem;
-  } */
+  }
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -297,8 +297,4 @@
     width: 95vw;
     height: 85vh;
   }
-}
-
-@media (min-width: 460px) {
-
 }
