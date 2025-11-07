@@ -22,21 +22,25 @@
 .title {
   /* font-family: 'Merriweather', serif; */
   font-family: 'Playfair Display', serif;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #111827;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  margin-left: 10px;
+    margin-right: 10px;
+      line-height: 35px;
 }
-.title h2{
+/* .title h2{
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
-}
+} */
 .subtitle {
   font-style: italic; 
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: #999;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  line-height: 16px;
   margin: 0;
   font-weight: 300;
 }
@@ -220,9 +224,9 @@
 
 /* Responsive Design */
 @media (min-width: 768px) {
-  .title {
+  /* .title {
     font-size: 3rem;
-  }
+  } */
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -293,4 +297,8 @@
     width: 95vw;
     height: 85vh;
   }
+}
+
+@media (min-width: 460px) {
+
 }
